@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: rgb(195, 210, 240);
+    }
+    .container{
+      text-align: center;
+      margin-top: 100px;
+      padding:80px  50px;
+      border-radius: 20px;
+      background: rgb(182, 202, 241);
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+    .input-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      align-items: start;
+    }
+    .input-wrap input {
+      font-size: 20px;
+      width: 100px;
+      height: 40px;
+      padding: 10px;
+      border: none;
+      outline: none;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px 0px inset;
+      border-radius: 10px;
+      margin-bottom: 5px;
+    }
+    .input-wrap label {
+      font-size: 24px;
+    }
+    button {
+      cursor: pointer;
+      background: rgb(118, 133, 245);
+      font-size: 24px;
+      padding: 10px 30px;
+      border-radius: 40px;
+      border: none;
+      transition: all 0.5s ease;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    button:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+    .start {
+      background: rgb(116, 237, 89);
+    }
+    .stop {
+      background: red;
+    }
+    .clear {
+      background: rgb(213, 251, 61);
+    }
+    #time {
+      margin: 100px 0 50px 0;
+    }
+    #time span,
+    #time b {
+      font-size: 50px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="input-wrap">
+        <div>
+          <input type="number" id="hrs" min="0" /> <br />
+          <label for="hrs">Hrs</label>
+        </div>
+        <div>
+          <input type="number" id="mins" min="0" max="59" /> <br />
+          <label for="mins">Mins</label>
+        </div>
+        <div>
+          <input type="number" id="secs" min="0" max="59" /> <br />
+          <label for="secs">Secs</label>
+        </div>
+        <button id="done">Done</button>
+      </div>
+      <div id="time">
+        <span class="hrs">00</span>
+        <b>:</b>
+        <span class="mins">00</span>
+        <b>:</b>
+        <span class="secs">00</span>
+      </div>
+
+      <div class="time-btns">
+        <button class="start">Start</button>
+        <button class="clear">Clear</button>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
